@@ -1,246 +1,195 @@
+ 
 
+### Actor Table Exercises
 
-### 1. Actor Table
+1. **Select:**
+   - Write a query to select all columns from the `actor` table.
+   - Retrieve actors' first names and last names.
+   - Select actors along with their actor_id.
+   - Fetch actors and include their birth dates.
+   - Retrieve actors and their corresponding email addresses.
 
-1. Write a SQL query to select all actors with their first name and last name.
-2. Select actors and display their names with aliases (`first_name` as `first` and `last_name` as `last`).
-3. Retrieve actors ordered by their last name in descending order.
-4. Find distinct last names of all actors.
-5. Select actors where the first name is 'Tom'.
-6. List actors whose last name contains 'son'.
-7. Retrieve actors where the last name is not specified (NULL).
-8. Count the number of actors grouped by their first name.
-9. Insert a new actor into the table.
-10. Update an actor's last name where the first name is 'Emma'.
-11. Delete an actor by actor_id.
-12. Use a subquery to find actors who have appeared in films with a rating above 8.
-13. Add a constraint to ensure each actor has a unique actor_id.
-14. Create a view to display actor_id and their full name (first name and last name).
-15. Implement a trigger to log changes made to the actor table.
+2. **Alias:**
+   - Select actors and alias `first_name` as `first` and `last_name` as `last`.
+   - Alias `actor_id` as `ID` in a query retrieving all actors.
+   - Retrieve actors and alias `first_name` as `given_name`.
+   - Alias `last_name` as `surname` in a query selecting actors.
+   - Select actors and alias `date_of_birth` as `DOB`.
 
-### 2. Film Table
+3. **Order By:**
+   - Retrieve actors ordered by their last name in ascending order.
+   - Select actors ordered by their first name in descending order.
+   - Fetch actors sorted by their birth dates in ascending order.
+   - Retrieve actors ordered by their actor_id in descending order.
+   - Select actors and order them by their email addresses alphabetically.
 
-1. Write a query to select all films with their titles and release years.
-2. Display film titles with aliases (`title` as `movie_title`).
-3. Retrieve films ordered by their length from longest to shortest.
-4. Find distinct ratings given to films.
-5. Select films released between 2010 and 2020.
-6. List films whose title contains the word 'War'.
-7. Retrieve films where the length is not specified (NULL).
-8. Count the number of films grouped by their rating.
-9. Insert a new film into the table.
-10. Update a film's release year where the title is 'Avatar'.
-11. Delete a film by film_id.
-12. Use a subquery to find films where the average rating is above the overall average.
-13. Add a constraint to ensure each film has a unique film_id.
-14. Create a view to display film titles and their length.
-15. Implement a trigger to log changes made to the film table.
+4. **Distinct:**
+   - Find distinct last names of all actors.
+   - Select distinct first names of actors.
+   - Retrieve distinct birth dates of actors.
+   - Find unique combinations of first and last names.
+   - Select unique email addresses of actors.
 
-### 3. Film Actor Table
+5. **Where:**
+   - Select actors where the first name is 'Tom'.
+   - Retrieve actors where the last name is 'Smith'.
+   - Find actors born before the year 1980.
+   - Select actors where the first name starts with 'A'.
+   - Retrieve actors where the email address is 'example@example.com'.
 
-1. Write a query to select all records from the film_actor table.
-2. Display film_id and actor_id with aliases (`film_id` as `film` and `actor_id` as `actor`).
-3. Retrieve film_actor records ordered by film_id and actor_id.
-4. Find distinct actor_ids from the film_actor table.
-5. Select records where the actor_id is in a specific list.
-6. List film_actor records for films released between 2015 and 2020.
-7. Retrieve records where the actor_id is not specified (NULL).
-8. Count the number of film_actor records grouped by film_id.
-9. Insert a new record into the film_actor table.
-10. Update a record's actor_id where the film_id is 1.
-11. Delete a record by film_id and actor_id.
-12. Use a subquery to find film_actor records where the film length is above 120 minutes.
-13. Add a constraint to ensure each film_actor record has a unique combination of film_id and actor_id.
-14. Create a view to display film titles and associated actor names.
-15. Implement a trigger to log changes made to the film_actor table.
+6. **AND:**
+   - List actors whose last name contains 'son' and first name starts with 'J'.
+   - Retrieve actors whose first name is 'John' and last name is 'Doe'.
+   - Find actors born after 1975 and whose last name contains 'son'.
+   - Select actors whose first name starts with 'M' and last name starts with 'D'.
+   - Retrieve actors born after 1985 and whose first name starts with 'S'.
 
-### 4. Category Table
+7. **Order:**
+   - Retrieve actors ordered by their last name in descending order.
+   - Select actors ordered by their actor_id in ascending order.
+   - Find actors sorted by their birth dates in ascending order.
+   - Retrieve actors ordered by the length of their first names in descending order.
+   - Select actors ordered by their email addresses alphabetically.
 
-1. Write a query to select all categories from the category table.
-2. Display category names with aliases (`name` as `category_name`).
-3. Retrieve categories ordered alphabetically by name.
-4. Find distinct category names.
-5. Select categories whose name contains the word 'Action'.
-6. List categories with no description specified (NULL).
-7. Count the number of films in each category, grouped by category name.
-8. Insert a new category into the table.
-9. Update a category's name where the category_id is 1.
-10. Delete a category by category_id.
-11. Use a subquery to find categories with films having a rating above 8.
-12. Add a constraint to ensure each category has a unique category_id.
-13. Create a view to display category names and the number of films in each category.
-14. Implement a trigger to log changes made to the category table.
+8. **Fetch:**
+   - Retrieve the first 5 actors in the table.
+   - Select the next 10 actors after skipping the first 5.
+   - Fetch the first 20 actors in the table.
+   - Retrieve 3 actors starting from the 7th position.
+   - Select 15 actors after skipping the first 10.
 
-### 5. Film Category Table
+9. **IN:**
+   - Select actors where the actor_id is in (1, 3, 5).
+   - Retrieve actors where the first_name is in ('Tom', 'Emma', 'John').
+   - Find actors whose actor_id is in (2, 4, 6).
+   - Select actors with actor_id in (10, 20, 30).
+   - Retrieve actors with actor_id in (100, 200, 300).
 
-1. Write a query to select all records from the film_category table.
-2. Display film_id and category_id with aliases (`film_id` as `film` and `category_id` as `category`).
-3. Retrieve film_category records ordered by film_id and category_id.
-4. Find distinct category_ids from the film_category table.
-5. Select records where the film_id is in a specific list.
-6. List film_category records for films released between 2010 and 2020.
-7. Retrieve records where the category_id is not specified (NULL).
-8. Count the number of film_category records grouped by category_id.
-9. Insert a new record into the film_category table.
-10. Update a record's category_id where the film_id is 1.
-11. Delete a record by film_id and category_id.
-12. Use a subquery to find film_category records where the average film length is above the overall average.
-13. Add a constraint to ensure each film_category record has a unique combination of film_id and category_id.
-14. Create a view to display film titles and associated category names.
-15. Implement a trigger to log changes made to the film_category table.
+10. **Joins:**
+    - Retrieve actors and their films using an inner join with the `film_actor` table.
+    - Select actors and their corresponding category names using a left join with `film_category`.
+    - Find actors who starred in films with specific ratings using a join with `film`.
+    - Retrieve actors and their payments using a join with `payment`.
+    - Select actors and the rental details of the films they starred in using a join with `rental`.
 
-### 6. Store Table
+11. **Like:**
+    - Find actors whose last name starts with 'S'.
+    - Retrieve actors whose first name contains 'a'.
+    - Select actors with last names ending with 'son'.
+    - Find actors with first names starting with 'M'.
+    - Retrieve actors whose last names contain 'son'.
 
-1. Write a query to select all stores from the store table.
-2. Display store_id, manager_staff_id, and address_id.
-3. Retrieve stores ordered by store_id.
-4. Find distinct manager_staff_ids from the store table.
-5. Select stores where the manager_staff_id is between 1 and 5.
-6. List stores where the address_id contains the number '10'.
-7. Retrieve records where the manager_staff_id is not specified (NULL).
-8. Count the number of stores grouped by manager_staff_id.
-9. Insert a new store into the table.
-10. Update a store's manager_staff_id where the store_id is 1.
-11. Delete a store by store_id.
-12. Use a subquery to find stores where rentals have been made by customers in New York.
-13. Add a constraint to ensure each store has a unique store_id.
-14. Create a view to display store details with the manager's full name.
-15. Implement a trigger to log changes made to the store table.
+12. **Is Null:**
+    - Retrieve actors where the last name is not specified (NULL).
+    - Select actors where the date_of_birth is not provided (NULL).
+    - Find actors whose email addresses are not available (NULL).
+    - Retrieve actors where the phone numbers are not provided (NULL).
+    - Select actors with no specified middle names (NULL).
 
+13. **Group By:**
+    - Count the number of actors grouped by their first name.
+    - Retrieve actors grouped by their last name and count those with more than 1 occurrence.
+    - Find actors and count their total payments grouped by actor_id.
+    - Select actors and count the number of films they appeared in grouped by actor_id.
+    - Retrieve actors grouped by their birth year and count those born in each year.
 
-### 7. Inventory Table
+14. **Having:**
+    - Display actors whose count of films they acted in is greater than 5.
+    - Select actors grouped by first name and having a count greater than 2.
+    - Find actors and display those with a total payment amount exceeding $1000.
+    - Retrieve actors grouped by their last names and having at least 2 occurrences.
+    - Select actors and display those with a total number of films greater than 10.
 
-1. Write a query to select all records from the inventory table.
-2. Display inventory_id, film_id, and store_id.
-3. Retrieve inventory records ordered by store_id and film_id.
-4. Find distinct film_ids in the inventory table.
-5. Select inventory records where the film_id is in a specific list.
-6. List inventory records where the store_id is not specified (NULL).
-7. Count the number of inventory records grouped by film_id.
-8. Insert a new inventory record into the table.
-9. Update an inventory record's film_id where the inventory_id is 1.
-10. Delete an inventory record by inventory_id.
-11. Use a subquery to find inventory records where the film length is above 120 minutes.
-12. Add a constraint to ensure each inventory record has a unique combination of film_id and store_id.
-13. Create a view to display inventory details including film titles and store locations.
-14. Implement a trigger to log changes made to the inventory table.
+15. **Insert:**
+    - Insert a new actor into the table.
+    - Add multiple actors in a single insert statement.
+    - Insert actors with specified first and last names.
+    - Add new actors with specified birth dates.
+    - Insert actors with specified email addresses.
 
-### 8. Rental Table
+16. **Update:**
+    - Update an actor's last name where the first name is 'Emma'.
+    - Change the first name of actors whose last name contains 'son'.
+    - Update actors' birth dates where the actor_id is in (1, 3, 5).
+    - Modify actors' email addresses whose last names start with 'D'.
+    - Update actors' last names where the first name starts with 'A'.
 
-1. Write a query to select all records from the rental table.
-2. Display rental_id, rental_date, return_date, customer_id, and inventory_id.
-3. Retrieve rental records ordered by rental_date in descending order.
-4. Find distinct customer_ids in the rental table.
-5. Select rental records where the customer_id is in a specific list.
-6. List rentals where the return_date is not specified (NULL).
-7. Count the number of rentals grouped by customer_id.
-8. Insert a new rental record into the table.
-9. Update a rental record's return_date where the rental_id is 1.
-10. Delete a rental record by rental_id.
-11. Use a subquery to find rentals made by customers in New York.
-12. Add a constraint to ensure each rental record has a unique rental_id.
-13. Create a view to display rental details including customer names and rented film titles.
-14. Implement a trigger to log changes made to the rental table.
+17. **Delete:**
+    - Delete an actor by actor_id.
+    - Remove actors whose first name is 'John'.
+    - Delete actors born before the year 1970.
+    - Remove actors with actor_id in (2, 4, 6).
+    - Delete actors with no specified email addresses.
 
-### 9. Payment Table
+18. **Subquery:**
+    - Use a subquery to find actors who have appeared in films with a rating above 8.
+    - Retrieve actors based on their film appearances using a subquery.
+    - Find actors with payments exceeding the average payment amount using a subquery.
+    - Select actors whose birth year matches the highest birth year in the table using a subquery.
+    - Retrieve actors whose first names match those in a specified list using a subquery.
 
-1. Write a query to select all records from the payment table.
-2. Display payment_id, customer_id, amount, and payment_date.
-3. Retrieve payment records ordered by payment_date.
-4. Find distinct customer_ids in the payment table.
-5. Select payments where the amount is between $10 and $50.
-6. List payments where the customer_id is not specified (NULL).
-7. Count the number of payments grouped by customer_id.
-8. Insert a new payment record into the table.
-9. Update a payment record's amount where the payment_id is 1.
-10. Delete a payment record by payment_id.
-11. Use a subquery to find payments made by customers with an income above the average.
-12. Add a constraint to ensure each payment record has a unique payment_id.
-13. Create a view to display payment details including customer names.
-14. Implement a trigger to log changes made to the payment table.
+19. **Constraint:**
+    - Add a constraint to ensure each actor has a unique actor_id.
+    - Implement a constraint to restrict actors' last names to be non-null.
+    - Define a constraint to ensure actors' first names are unique.
+    - Add a constraint to enforce a minimum age requirement for actors.
+    - Implement a constraint to ensure actors' birth dates are within a specified range.
 
-### 10. Staff Table
+20. **View:**
+    - Create a view to display actor_id and their full name (first name and last name).
+    - Design a view to show actors along with their birth dates.
+    - Define a view to display actors and their total payments.
+    - Create a view to show actors with their corresponding films.
+    - Design a view to display actors and their category names.
 
-1. Write a query to select all records from the staff table.
-2. Display staff_id, first_name, last_name, and email.
-3. Retrieve staff records ordered by last_name and first_name.
-4. Find distinct email addresses in the staff table.
-5. Select staff where the store_id is in a specific list.
-6. List staff members where the email address is not specified (NULL).
-7. Count the number of staff members grouped by store_id.
-8. Insert a new staff member into the table.
-9. Update a staff member's email where the staff_id is 1.
-10. Delete a staff member by staff_id.
-11. Use a subquery to find staff members who manage stores in cities with a population above 1 million.
-12. Add a constraint to ensure each staff member has a unique staff_id.
-13. Create a view to display staff details including store locations.
-14. Implement a trigger to log changes made to the staff table.
+21. **Trigger:**
+    - Implement a trigger to log changes made to the actor table.
+    - Create a trigger to update an audit table whenever an actor record is deleted.
+    - Define a trigger to update actors' payment history when new payments are added.
+    - Implement a trigger to enforce a constraint on actors' email addresses.
+    - Create a trigger to update actors' records when their details are modified.
 
-### 11. Customer Table
+22. **Functions:**
+    - Write a function to retrieve the total number of actors in the table.
+    - Define a function to calculate the average age of actors.
+    - Create a function to determine the number of films each actor has appeared in.
+    - Write a function to retrieve the age of actors based on their birth dates.
+    - Define a function to calculate the total payment amount received by actors.
 
-1. Write a query to select all records from the customer table.
-2. Display customer_id, first_name, last_name, and email.
-3. Retrieve customers ordered by last_name and first_name.
-4. Find distinct email addresses in the customer table.
-5. Select customers where the city_id is in a specific list.
-6. List customers where the email address is not specified (NULL).
-7. Count the number of customers grouped by city_id.
-8. Insert a new customer into the table.
-9. Update a customer's email where the customer_id is 1.
-10. Delete a customer by customer_id.
-11. Use a subquery to find customers who have rented films in more than one store.
-12. Add a constraint to ensure each customer has a unique customer_id.
-13. Create a view to display customer details including city and country names.
-14. Implement a trigger to log changes made to the customer table.
+23. **Procedures:**
+    - Create a procedure to fetch actors by a specific criterion (e.g., by last name).
+    - Implement a procedure to update an actor's information (e.g., first name and last name) based on actor_id.
+    - Define a procedure to delete actors with no specified email addresses.
+    - Create a procedure to insert new actors into the table.
+    - Implement a procedure to retrieve actors and their corresponding films.
 
-### 12. Address Table
+24. **Aggregate Functions:**
+    - Calculate the average length of actors' last names.
+    - Find the maximum number of films acted by any actor.
+    - Determine the minimum age of actors based on their birth dates.
+    - Calculate the sum of payments received by all actors.
+    - Count the number of actors in the table.
 
-1. Write a query to select all records from the address table.
-2. Display address_id, address, city_id, and postal_code.
-3. Retrieve addresses ordered by city_id and postal_code.
-4. Find distinct postal codes in the address table.
-5. Select addresses where the city_id is in a specific list.
-6. List addresses where the postal code is not specified (NULL).
-7. Count the number of addresses grouped by city_id.
-8. Insert a new address into the table.
-9. Update an address's postal code where the address_id is 1.
-10. Delete an address by address_id.
-11. Use a subquery to find addresses with staff members living in the same city.
-12. Add a constraint to ensure each address has a unique address_id.
-13. Create a view to display address details including city and country names.
-14. Implement a trigger to log changes made to the address table.
+25. **String Functions:**
+    - Retrieve actors' last names in uppercase.
+    - Concatenate actors' first names and last names with a space in between.
+    - Extract the first 3 characters of actors' first names.
+    - Find actors whose last names contain the substring 'son'.
+    - Replace 'a' with 'o' in actors' first names.
 
-### 13. City Table
+26. **Date Functions:**
+    - Select actors born after a specific date.
+    - Calculate the age of actors based on their birth dates.
+   
 
-1. Write a query to select all records from the city table.
-2. Display city_id and city.
-3. Retrieve cities ordered alphabetically by city name.
-4. Find distinct city names in the city table.
-5. Select cities where the country_id is in a specific list.
-6. List cities where the city name contains the word 'York'.
-7. Count the number of cities grouped by country_id.
-8. Insert a new city into the table.
-9. Update a city's name where the city_id is 1.
-10. Delete a city by city_id.
-11. Use a subquery to find cities with more than 100,000 residents.
-12. Add a constraint to ensure each city has a unique city_id.
-13. Create a view to display city details including country names.
-14. Implement a trigger to log changes made to the city table.
+ - Retrieve actors born in a particular year.
+    - Find actors born before a specific date.
+    - Determine the current age of actors.
 
-### 14. Country Table
-
-1. Write a query to select all records from the country table.
-2. Display country_id and country.
-3. Retrieve countries ordered alphabetically by country name.
-4. Find distinct country names in the country table.
-5. Select countries where the country name starts with the letter 'U'.
-6. List countries where the country_id is not specified (NULL).
-7. Count the number of countries.
-8. Insert a new country into the table.
-9. Update a country's name where the country_id is 1.
-10. Delete a country by country_id.
-11. Use a subquery to find countries with more than 10 cities.
-12. Add a constraint to ensure each country has a unique country_id.
-13. Create a view to display country details.
-14. Implement a trigger to log changes made to the country table.
+27. **Common Table Expression (CTE):**
+    - Use a CTE to find actors who appeared in more than one film.
+    - Retrieve actors and their total payments using a CTE.
+    - Find actors and their corresponding films using a CTE.
+    - Select actors and their birth dates using a CTE.
+    - Retrieve actors and their category names using a CTE.
 
