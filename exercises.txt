@@ -1,0 +1,246 @@
+
+
+### 1. Actor Table
+
+1. Write a SQL query to select all actors with their first name and last name.
+2. Select actors and display their names with aliases (`first_name` as `first` and `last_name` as `last`).
+3. Retrieve actors ordered by their last name in descending order.
+4. Find distinct last names of all actors.
+5. Select actors where the first name is 'Tom'.
+6. List actors whose last name contains 'son'.
+7. Retrieve actors where the last name is not specified (NULL).
+8. Count the number of actors grouped by their first name.
+9. Insert a new actor into the table.
+10. Update an actor's last name where the first name is 'Emma'.
+11. Delete an actor by actor_id.
+12. Use a subquery to find actors who have appeared in films with a rating above 8.
+13. Add a constraint to ensure each actor has a unique actor_id.
+14. Create a view to display actor_id and their full name (first name and last name).
+15. Implement a trigger to log changes made to the actor table.
+
+### 2. Film Table
+
+1. Write a query to select all films with their titles and release years.
+2. Display film titles with aliases (`title` as `movie_title`).
+3. Retrieve films ordered by their length from longest to shortest.
+4. Find distinct ratings given to films.
+5. Select films released between 2010 and 2020.
+6. List films whose title contains the word 'War'.
+7. Retrieve films where the length is not specified (NULL).
+8. Count the number of films grouped by their rating.
+9. Insert a new film into the table.
+10. Update a film's release year where the title is 'Avatar'.
+11. Delete a film by film_id.
+12. Use a subquery to find films where the average rating is above the overall average.
+13. Add a constraint to ensure each film has a unique film_id.
+14. Create a view to display film titles and their length.
+15. Implement a trigger to log changes made to the film table.
+
+### 3. Film Actor Table
+
+1. Write a query to select all records from the film_actor table.
+2. Display film_id and actor_id with aliases (`film_id` as `film` and `actor_id` as `actor`).
+3. Retrieve film_actor records ordered by film_id and actor_id.
+4. Find distinct actor_ids from the film_actor table.
+5. Select records where the actor_id is in a specific list.
+6. List film_actor records for films released between 2015 and 2020.
+7. Retrieve records where the actor_id is not specified (NULL).
+8. Count the number of film_actor records grouped by film_id.
+9. Insert a new record into the film_actor table.
+10. Update a record's actor_id where the film_id is 1.
+11. Delete a record by film_id and actor_id.
+12. Use a subquery to find film_actor records where the film length is above 120 minutes.
+13. Add a constraint to ensure each film_actor record has a unique combination of film_id and actor_id.
+14. Create a view to display film titles and associated actor names.
+15. Implement a trigger to log changes made to the film_actor table.
+
+### 4. Category Table
+
+1. Write a query to select all categories from the category table.
+2. Display category names with aliases (`name` as `category_name`).
+3. Retrieve categories ordered alphabetically by name.
+4. Find distinct category names.
+5. Select categories whose name contains the word 'Action'.
+6. List categories with no description specified (NULL).
+7. Count the number of films in each category, grouped by category name.
+8. Insert a new category into the table.
+9. Update a category's name where the category_id is 1.
+10. Delete a category by category_id.
+11. Use a subquery to find categories with films having a rating above 8.
+12. Add a constraint to ensure each category has a unique category_id.
+13. Create a view to display category names and the number of films in each category.
+14. Implement a trigger to log changes made to the category table.
+
+### 5. Film Category Table
+
+1. Write a query to select all records from the film_category table.
+2. Display film_id and category_id with aliases (`film_id` as `film` and `category_id` as `category`).
+3. Retrieve film_category records ordered by film_id and category_id.
+4. Find distinct category_ids from the film_category table.
+5. Select records where the film_id is in a specific list.
+6. List film_category records for films released between 2010 and 2020.
+7. Retrieve records where the category_id is not specified (NULL).
+8. Count the number of film_category records grouped by category_id.
+9. Insert a new record into the film_category table.
+10. Update a record's category_id where the film_id is 1.
+11. Delete a record by film_id and category_id.
+12. Use a subquery to find film_category records where the average film length is above the overall average.
+13. Add a constraint to ensure each film_category record has a unique combination of film_id and category_id.
+14. Create a view to display film titles and associated category names.
+15. Implement a trigger to log changes made to the film_category table.
+
+### 6. Store Table
+
+1. Write a query to select all stores from the store table.
+2. Display store_id, manager_staff_id, and address_id.
+3. Retrieve stores ordered by store_id.
+4. Find distinct manager_staff_ids from the store table.
+5. Select stores where the manager_staff_id is between 1 and 5.
+6. List stores where the address_id contains the number '10'.
+7. Retrieve records where the manager_staff_id is not specified (NULL).
+8. Count the number of stores grouped by manager_staff_id.
+9. Insert a new store into the table.
+10. Update a store's manager_staff_id where the store_id is 1.
+11. Delete a store by store_id.
+12. Use a subquery to find stores where rentals have been made by customers in New York.
+13. Add a constraint to ensure each store has a unique store_id.
+14. Create a view to display store details with the manager's full name.
+15. Implement a trigger to log changes made to the store table.
+
+
+### 7. Inventory Table
+
+1. Write a query to select all records from the inventory table.
+2. Display inventory_id, film_id, and store_id.
+3. Retrieve inventory records ordered by store_id and film_id.
+4. Find distinct film_ids in the inventory table.
+5. Select inventory records where the film_id is in a specific list.
+6. List inventory records where the store_id is not specified (NULL).
+7. Count the number of inventory records grouped by film_id.
+8. Insert a new inventory record into the table.
+9. Update an inventory record's film_id where the inventory_id is 1.
+10. Delete an inventory record by inventory_id.
+11. Use a subquery to find inventory records where the film length is above 120 minutes.
+12. Add a constraint to ensure each inventory record has a unique combination of film_id and store_id.
+13. Create a view to display inventory details including film titles and store locations.
+14. Implement a trigger to log changes made to the inventory table.
+
+### 8. Rental Table
+
+1. Write a query to select all records from the rental table.
+2. Display rental_id, rental_date, return_date, customer_id, and inventory_id.
+3. Retrieve rental records ordered by rental_date in descending order.
+4. Find distinct customer_ids in the rental table.
+5. Select rental records where the customer_id is in a specific list.
+6. List rentals where the return_date is not specified (NULL).
+7. Count the number of rentals grouped by customer_id.
+8. Insert a new rental record into the table.
+9. Update a rental record's return_date where the rental_id is 1.
+10. Delete a rental record by rental_id.
+11. Use a subquery to find rentals made by customers in New York.
+12. Add a constraint to ensure each rental record has a unique rental_id.
+13. Create a view to display rental details including customer names and rented film titles.
+14. Implement a trigger to log changes made to the rental table.
+
+### 9. Payment Table
+
+1. Write a query to select all records from the payment table.
+2. Display payment_id, customer_id, amount, and payment_date.
+3. Retrieve payment records ordered by payment_date.
+4. Find distinct customer_ids in the payment table.
+5. Select payments where the amount is between $10 and $50.
+6. List payments where the customer_id is not specified (NULL).
+7. Count the number of payments grouped by customer_id.
+8. Insert a new payment record into the table.
+9. Update a payment record's amount where the payment_id is 1.
+10. Delete a payment record by payment_id.
+11. Use a subquery to find payments made by customers with an income above the average.
+12. Add a constraint to ensure each payment record has a unique payment_id.
+13. Create a view to display payment details including customer names.
+14. Implement a trigger to log changes made to the payment table.
+
+### 10. Staff Table
+
+1. Write a query to select all records from the staff table.
+2. Display staff_id, first_name, last_name, and email.
+3. Retrieve staff records ordered by last_name and first_name.
+4. Find distinct email addresses in the staff table.
+5. Select staff where the store_id is in a specific list.
+6. List staff members where the email address is not specified (NULL).
+7. Count the number of staff members grouped by store_id.
+8. Insert a new staff member into the table.
+9. Update a staff member's email where the staff_id is 1.
+10. Delete a staff member by staff_id.
+11. Use a subquery to find staff members who manage stores in cities with a population above 1 million.
+12. Add a constraint to ensure each staff member has a unique staff_id.
+13. Create a view to display staff details including store locations.
+14. Implement a trigger to log changes made to the staff table.
+
+### 11. Customer Table
+
+1. Write a query to select all records from the customer table.
+2. Display customer_id, first_name, last_name, and email.
+3. Retrieve customers ordered by last_name and first_name.
+4. Find distinct email addresses in the customer table.
+5. Select customers where the city_id is in a specific list.
+6. List customers where the email address is not specified (NULL).
+7. Count the number of customers grouped by city_id.
+8. Insert a new customer into the table.
+9. Update a customer's email where the customer_id is 1.
+10. Delete a customer by customer_id.
+11. Use a subquery to find customers who have rented films in more than one store.
+12. Add a constraint to ensure each customer has a unique customer_id.
+13. Create a view to display customer details including city and country names.
+14. Implement a trigger to log changes made to the customer table.
+
+### 12. Address Table
+
+1. Write a query to select all records from the address table.
+2. Display address_id, address, city_id, and postal_code.
+3. Retrieve addresses ordered by city_id and postal_code.
+4. Find distinct postal codes in the address table.
+5. Select addresses where the city_id is in a specific list.
+6. List addresses where the postal code is not specified (NULL).
+7. Count the number of addresses grouped by city_id.
+8. Insert a new address into the table.
+9. Update an address's postal code where the address_id is 1.
+10. Delete an address by address_id.
+11. Use a subquery to find addresses with staff members living in the same city.
+12. Add a constraint to ensure each address has a unique address_id.
+13. Create a view to display address details including city and country names.
+14. Implement a trigger to log changes made to the address table.
+
+### 13. City Table
+
+1. Write a query to select all records from the city table.
+2. Display city_id and city.
+3. Retrieve cities ordered alphabetically by city name.
+4. Find distinct city names in the city table.
+5. Select cities where the country_id is in a specific list.
+6. List cities where the city name contains the word 'York'.
+7. Count the number of cities grouped by country_id.
+8. Insert a new city into the table.
+9. Update a city's name where the city_id is 1.
+10. Delete a city by city_id.
+11. Use a subquery to find cities with more than 100,000 residents.
+12. Add a constraint to ensure each city has a unique city_id.
+13. Create a view to display city details including country names.
+14. Implement a trigger to log changes made to the city table.
+
+### 14. Country Table
+
+1. Write a query to select all records from the country table.
+2. Display country_id and country.
+3. Retrieve countries ordered alphabetically by country name.
+4. Find distinct country names in the country table.
+5. Select countries where the country name starts with the letter 'U'.
+6. List countries where the country_id is not specified (NULL).
+7. Count the number of countries.
+8. Insert a new country into the table.
+9. Update a country's name where the country_id is 1.
+10. Delete a country by country_id.
+11. Use a subquery to find countries with more than 10 cities.
+12. Add a constraint to ensure each country has a unique country_id.
+13. Create a view to display country details.
+14. Implement a trigger to log changes made to the country table.
+
